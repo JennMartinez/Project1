@@ -1,9 +1,23 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    background-image: url(../images/concert.jpg);
+    background-size: cover;
 }
 h1 {
     font-family: 'Shrikhand', cursive;
 }
 .pic {
     text-align: center;
+}
+.btn {
+    background-color: #2e9177;
+}
+.jumbotron {
+    background-color: #912e6d;
+}
+.about-text {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 5px;
+    padding: 10px;
 }
