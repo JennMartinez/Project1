@@ -21,3 +21,13 @@ h1 {
     border-radius: 5px;
     padding: 10px;
 }
+.card-body {
+    text-align: center;
+}
+.card-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+/* .age-verify {
+    margin-right: 10px;
+} */
