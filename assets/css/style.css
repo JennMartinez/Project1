@@ -15,6 +15,9 @@ h1 {
 .jumbotron {
     background-color: #912e6d;
 }
+.order-header {
+    font-size: 45px !important;
+}
 .about-text {
     color: #ffffff;
     background-color: rgba(0, 0, 0, .6);
@@ -28,6 +31,13 @@ h1 {
     font-size: 20px;
     font-weight: 700;
 }
-/* .age-verify {
-    margin-right: 10px;
-} */
+.idCheck {
+    font-size: 12px;
+    font-style: italic;
+}
+.form-check-label {
+    font-size: 15px;
+}
+.required {
+    font-size: 12px;
+}
