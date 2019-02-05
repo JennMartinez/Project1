@@ -41,3 +41,6 @@ h1 {
 .required {
     font-size: 12px;
 }
+.results-box {
+    display: none;
+}
