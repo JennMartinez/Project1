@@ -30,3 +30,17 @@ $.ajax(settings).done(function (response) {
 var location = 0;
 
 });
+
+/* Sergio's Coding Space (if you need to add a function to the submit button click, feel free to do it here --------------------------------------------------------------------*/
+
+// Submit button on-click function:
+
+$(".submit-order").on("click", function() {
+
+  //hides .form-box on submit click
+  $(".form-box").css("display", "none");
+
+  //displays .results-box on submit click
+  $(".results-box").css("display", "inline");
+
+})
