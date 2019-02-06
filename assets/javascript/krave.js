@@ -186,6 +186,9 @@ var item5 = "";
 $(".submit-order").on("click", function(event) {
   event.preventDefault();
 
+  $("#total-table > tbody").empty();
+  $("#item-table > tbody").empty();
+
   // $(".form-box").css("display", "none");
   // $(".results-box").css("display", "block");
 
@@ -260,12 +263,21 @@ database.ref().on("child_added", function(childSnapshot, prevChildkey) {
 
   // Appends order info to table
   $("#item-table > tbody").append(
-      "<tr><td>" + item1.name + "</td><td>" + item1.price + "</td></tr>",
-      "<tr><td>" + item2.name + "</td><td>" + item2.price + "</td></tr>",
-      "<tr><td>" + item3.name + "</td><td>" + item3.price + "</td></tr>",
-      "<tr><td>" + item4.name + "</td><td>" + item4.price + "</td></tr>",
-      "<tr><td>" + item5.name + "</td><td>" + item5.price + "</td></tr>"
+      "<tr><td>" + "1" + "</td><td>" + item1.name + "</td><td>" + item1.price + "</td></tr>",
+      "<tr><td>" + "2" + "</td><td>" + item2.name + "</td><td>" + item2.price + "</td></tr>",
+      "<tr><td>" + "3" + "</td><td>" + item3.name + "</td><td>" + item3.price + "</td></tr>",
+      "<tr><td>" + "4" + "</td><td>" + item4.name + "</td><td>" + item4.price + "</td></tr>",
+      "<tr><td>" + "5" + "</td><td>" + item5.name + "</td><td>" + item5.price + "</td></tr>"
   );
+
+  // $("#total-table > tbody").empty();
+
+  // $("#total-table").empty();
+
+  $("#total-table > tbody").append(
+    "<tr><td>" + "$37.95" + "</td><td>" + "$3.51" + "</td><td>" + "$41.46" + "</td></tr>"
+  );
+
 });
 
 });
