@@ -11,9 +11,9 @@ Our app is a food and alcohol delivery service. It will use a MapQuest API to fi
 
 ## APIs to be used
 + MapQuest
-+ ?
++ Yelp
 
 ## Rough breakdown of tasks
 + Sergio will handle the layout (HTML and CSS)
-+ Jenn will configure the MapQuest API
-+ Michael will configure the ? API
++ Jenn will configure the Yelp API
++ Michael will configure the MapQuest API
