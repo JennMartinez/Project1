@@ -1,15 +1,29 @@
+var config = {
+  apiKey: "AIzaSyAcH8o1HyoSno3hY7eR6DqX1CuR8OWj_TE",
+  authDomain: "krave-7a2d2.firebaseapp.com",
+  databaseURL: "https://krave-7a2d2.firebaseio.com",
+  projectId: "krave-7a2d2",
+  storageBucket: "krave-7a2d2.appspot.com",
+  messagingSenderId: "8765155413"
+};
+firebase.initializeApp(config);
+
+var database = firebase.database();
+
 // / Document Ready //
 $(document).ready(function() {
 
+
 // queryURL //
+
 var queryURL = "https://api.yelp.com/v3/businesses/search?term=store&location" + location + "&categories=liquor";
 
-// api key //
+ // api key //
 var apiKey = "3X8xKVE39_n-9lZYPfTjEZBbxQAWRqAWj_jhyXfvsXkFMbqc-C1C3wor3d5JUWJqOqGWxb3c4vhgrWpHtjiW_AR8d8z2vpf0Df91ijaUcTuWb4C6gyrbNfNDbwBWXHYx";
 
 // "https://api.yelp.com/v3/businesses/search?q=&api_key=3X8xKVE39_n-9lZYPfTjEZBbxQAWRqAWj_jhyXfvsXkFMbqc-C1C3wor3d5JUWJqOqGWxb3c4vhgrWpHtjiW_AR8d8z2vpf0Df91ijaUcTuWb4C6gyrbNfNDbwBWXHYx";
 
-// AJAX GET request to the queryURL //
+//AJAX GET request to the queryURL //
 var settings = {
     "async": true,
     "crossDomain": true,
@@ -161,3 +175,4 @@ $("#run-search").on("click", function(event) {
 $("#clear-all").on("click", clear);
 
 });
+
