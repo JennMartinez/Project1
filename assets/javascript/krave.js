@@ -13,6 +13,7 @@ var database = firebase.database();
 // / Document Ready //
 $(document).ready(function() {
 
+// $(".results-box").hide();
 
 // queryURL //
 
@@ -186,8 +187,13 @@ var item5 = "";
 $(".submit-order").on("click", function(event) {
   event.preventDefault();
 
-  $("#total-table > tbody").empty();
-  $("#item-table > tbody").empty();
+  // $(".form-box").hide();
+  // $(".results-box").show();
+
+  // $("#total-table").empty();
+  // $("#item-table").empty();
+
+  // database.ref().remove(itemsOrdered);
 
   // $(".form-box").css("display", "none");
   // $(".results-box").css("display", "block");
