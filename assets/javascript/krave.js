@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 function callApi() {
 // queryURL //
-    var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=store&location=" + location + "";
+    var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?limit=1&term=store&location=" + location + "";
 
     // api key //
     var apiKey = "3X8xKVE39_n-9lZYPfTjEZBbxQAWRqAWj_jhyXfvsXkFMbqc-C1C3wor3d5JUWJqOqGWxb3c4vhgrWpHtjiW_AR8d8z2vpf0Df91ijaUcTuWb4C6gyrbNfNDbwBWXHYx";
@@ -78,81 +78,6 @@ function yelpQuery() {
     location = address.concat(" ", city, " ", state, " ", zipCode);
     console.log(location);
 }
-
-// Function to list stores from Yelp //
-function refreshPage(yelp) {
-  // Display store locations within customers vicinity //
-    var storeList = $(".item-info").val();
-    
-  // Loop for list of stores by location //
-    for (var i = 0; i < storeList; i++) {
-
-  // Get specific store list //
-      var store = storeList[i];
-  
-  // Adds number of stores by location //
-      var addStore = i + 1;
-  
-  // Displays the stores in a list/table format //
-      var listOfStores = $("<ul>");
-      listOfStores.addClass("list-group");
-  
-  // Adds the list of stores to the site //
-      $("#article-section").append(listOfStores);
-  
-  // The name of the store will append to the list //
-      var storeName = store.storeName;
-      var listOfStoresLocation = $("<li class='list-group-item articleHeadline'>");
-  
-      if (storeName && storeName.main) {
-        console.log(storeName.main);
-        listOfStoresLocation.append(
-          "<span class='label label-primary'>" +
-            addStore +
-            "</span>" +
-            "<strong> " +
-            storeName.main +
-            "</strong>"
-        );
-      }
-  
-  // Add/append the store to the present list //
-    listOfStores.append(listOfStoresLocation);
-}
-}
-
-// Function for customers store of choice //
-function storeChoice () {
-
-}
-
-// Function for chosen store location to present onscreen //
-function locationOnScreen () {
-  
-}
-
-// Function to clear user input //
-function clear() {
-    $("#article-section").empty();
-}
-    
-// Sumbit button //
-$("#run-search").on("click", function(event) {
-    event.preventDefault();
-    clear();
-  
-// QueryURL for the AJAX GET request //
-    var queryURL = yelpQuery();
-  
-// AJAX request //
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(updatePage);
-});
-  
-// Creates the clearing of the user input fields //
-$("#clear-all").on("click", clear);
 
 // Firebase code - takes data from 'inputItem' form, sends it to Firebase, then pulls from Firebase to populate the table
 
@@ -250,9 +175,9 @@ database.ref().on("child_added", function(childSnapshot, prevChildkey) {
       "<tr><td>" + "5" + "</td><td>" + item5.name + "</td><td>" + item5.price + "</td></tr>"
   );
 
-  // $("#total-table > tbody").empty();
+  $("#total-table > tbody").empty();
 
-  // $("#total-table").empty();
+  $("#total-table").empty();
 
   $("#total-table > tbody").append(
     "<tr><td>" + "$37.95" + "</td><td>" + "$3.51" + "</td><td>" + "$41.46" + "</td></tr>"
