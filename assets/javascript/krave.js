@@ -1,6 +1,7 @@
 // Document Ready //
 $(document).ready(function() {
 
+
     var address = "";
     var city = "";
     var state = "";
@@ -14,6 +15,9 @@ $(document).ready(function() {
       });
 
 function callApi() {
+
+// $(".results-box").hide();
+
 // queryURL //
     var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?limit=1&term=store&location=" + location + "";
 
@@ -91,8 +95,13 @@ var item5 = "";
 $(".submit-order").on("click", function(event) {
   event.preventDefault();
 
-  $("#total-table > tbody").empty();
-  $("#item-table > tbody").empty();
+  // $(".form-box").hide();
+  // $(".results-box").show();
+
+  // $("#total-table").empty();
+  // $("#item-table").empty();
+
+  // database.ref().remove(itemsOrdered);
 
   // $(".form-box").css("display", "none");
   // $(".results-box").css("display", "block");
