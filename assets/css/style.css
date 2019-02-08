@@ -3,6 +3,14 @@ body {
     background-image: url(../images/concert.jpg);
     background-size: cover;
 }
+.mickey {
+    position: absolute;
+    bottom: -38px;
+    left: 38px;
+}
+.confirm-order {
+    width: 192px;
+}
 h1 {
     font-family: 'Shrikhand', cursive;
 }
