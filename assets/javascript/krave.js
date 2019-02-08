@@ -1,3 +1,16 @@
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAcH8o1HyoSno3hY7eR6DqX1CuR8OWj_TE",
+  authDomain: "krave-7a2d2.firebaseapp.com",
+  databaseURL: "https://krave-7a2d2.firebaseio.com",
+  projectId: "krave-7a2d2",
+  storageBucket: "krave-7a2d2.appspot.com",
+  messagingSenderId: "8765155413"
+};
+firebase.initializeApp(config);
+
+var database = firebase.database();
+
 // Document Ready //
 $(document).ready(function() {
 
@@ -189,10 +202,6 @@ database.ref().on("child_added", function(childSnapshot, prevChildkey) {
   );
 
   $("#total-table > tbody").empty();
-
-
-  $("#total-table").empty();
-
 
   $("#total-table > tbody").append(
     "<tr><td>" + "$37.95" + "</td><td>" + "$3.51" + "</td><td>" + "$41.46" + "</td></tr>"
