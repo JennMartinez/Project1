@@ -13,7 +13,7 @@ var database = firebase.database();
 // / Document Ready //
 $(document).ready(function() {
 
-// $(".results-box").hide();
+$(".results-box").hide();
 
 // queryURL //
 
@@ -187,13 +187,13 @@ var item5 = "";
 $(".submit-order").on("click", function(event) {
   event.preventDefault();
 
-  // $(".form-box").hide();
-  // $(".results-box").show();
+  $(".order-form").hide();
+  $(".results-box").show();
 
   // $("#total-table").empty();
   // $("#item-table").empty();
 
-  // database.ref().remove(itemsOrdered);
+  database.ref().remove(orderItems);
 
   // $(".form-box").css("display", "none");
   // $(".results-box").css("display", "block");
@@ -243,7 +243,7 @@ $(".submit-order").on("click", function(event) {
   database.ref().push(orderItems);
 
   // Alert
-  swal("Success!", "Your order has been received!", "success");
+  // swal("Success!", "Your order has been received!", "success");
 
   $("#inputItem1").val("");
   $("#inputItem2").val("");
@@ -265,7 +265,8 @@ database.ref().on("child_added", function(childSnapshot, prevChildkey) {
   console.log(item2);
   console.log(item3);
   console.log(item4);
-  console.log(item5);
+  
+  $("#item-table > tbody").empty();
 
   // Appends order info to table
   $("#item-table > tbody").append(
@@ -276,9 +277,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildkey) {
       "<tr><td>" + "5" + "</td><td>" + item5.name + "</td><td>" + item5.price + "</td></tr>"
   );
 
-  // $("#total-table > tbody").empty();
-
-  // $("#total-table").empty();
+  $("#total-table > tbody").empty();
 
   $("#total-table > tbody").append(
     "<tr><td>" + "$37.95" + "</td><td>" + "$3.51" + "</td><td>" + "$41.46" + "</td></tr>"
