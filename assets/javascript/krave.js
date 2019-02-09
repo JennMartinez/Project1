@@ -21,6 +21,7 @@ $(document).ready(function() {
   var state = "";
   var zipCode = 0;
   var location = "";
+  
   $(".submit-order").click(function(event){
       event.preventDefault();
       console.log("hello jen");
@@ -34,8 +35,6 @@ function callApi() {
 
   // api key //
   var apiKey = "3X8xKVE39_n-9lZYPfTjEZBbxQAWRqAWj_jhyXfvsXkFMbqc-C1C3wor3d5JUWJqOqGWxb3c4vhgrWpHtjiW_AR8d8z2vpf0Df91ijaUcTuWb4C6gyrbNfNDbwBWXHYx";
-
-  // "https://api.yelp.com/v3/businesses/search?q=&api_key=3X8xKVE39_n-9lZYPfTjEZBbxQAWRqAWj_jhyXfvsXkFMbqc-C1C3wor3d5JUWJqOqGWxb3c4vhgrWpHtjiW_AR8d8z2vpf0Df91ijaUcTuWb4C6gyrbNfNDbwBWXHYx";
 
   // AJAX GET request to the queryURL //
   var settings = {
@@ -58,6 +57,7 @@ function callApi() {
       console.log(response.businesses[0].location.state);
       console.log(response.businesses[0].location.zip_code);
  
+
 
 $(".stores-list").html(" " + (response.businesses[0].name) 
 + " " + (response.businesses[0].location.address1) + " " + (response.businesses[0].location.city) + " "
@@ -207,3 +207,4 @@ $(".submit-order").on("click", function(event) {
     );
   });
 });
+
