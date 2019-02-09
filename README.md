@@ -7,7 +7,7 @@ KRAVE
 Jenn Martinez, Michael Navid, Sergio Di Martino
 
 ## Project Description
-Our app is a food and alcohol delivery service. It will use a MapQuest API to find local grocery stores or liquor stores, and 
+Our app is a food and alcohol delivery service. It will use a MapQuest API to find local grocery stores or liquor stores, and contact a delivery driver to complete the transaction.
 
 ## APIs to be used
 + MapQuest

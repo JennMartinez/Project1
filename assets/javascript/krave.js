@@ -19,6 +19,7 @@ $(document).ready(function() {
   var state = "";
   var zipCode = 0;
   var location = "";
+  
   $(".submit-order").click(function(event){
       event.preventDefault();
       console.log("hello jen");
@@ -32,8 +33,6 @@ function callApi() {
 
   // api key //
   var apiKey = "3X8xKVE39_n-9lZYPfTjEZBbxQAWRqAWj_jhyXfvsXkFMbqc-C1C3wor3d5JUWJqOqGWxb3c4vhgrWpHtjiW_AR8d8z2vpf0Df91ijaUcTuWb4C6gyrbNfNDbwBWXHYx";
-
-  // "https://api.yelp.com/v3/businesses/search?q=&api_key=3X8xKVE39_n-9lZYPfTjEZBbxQAWRqAWj_jhyXfvsXkFMbqc-C1C3wor3d5JUWJqOqGWxb3c4vhgrWpHtjiW_AR8d8z2vpf0Df91ijaUcTuWb4C6gyrbNfNDbwBWXHYx";
 
   // AJAX GET request to the queryURL //
   var settings = {
@@ -57,9 +56,9 @@ function callApi() {
       console.log(response.businesses[0].location.zip_code);
  
 
-$(".stores-list").html("<tr><td>" + (response) + "</td><td>" + (response.businesses[0].name) 
-+ "</td><td>" + (response.businesses[0].location.address1) + "</td><td>" + (response.businesses[0].location.city) + "</td><td>"
-+ (response.businesses[0].location.state) + (response.businesses[0].location.zip_code) + "</td></tr>");
+$(".stores-list").html(" " + (response.businesses[0].name)
++ " " + (response.businesses[0].location.address1) + " " + (response.businesses[0].location.city) + " "
++ (response.businesses[0].location.state) + " " + (response.businesses[0].location.zip_code) + " ");
 });
 }
 
@@ -209,5 +208,52 @@ $("#total-table > tbody").append(
 
 });
 
+
+// Beginning of Michael's code //
+
+// MapQuest API and onclick function //
+$(".test-button").click(function(event){
+  event.preventDefault(); 
+  console.log(".test-button");  
 });
+
+window.onload = function() {
+  L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
+
+  var map = L.mapquest.map('#map', {
+    center: [40.7128, -74.0059],
+    layers: L.mapquest.tileLayer('#map'),
+    zoom: 13
+  });
+
+  L.mapquest.directions().route({
+    start: $(".stores-list").html(" " + (response.businesses[0].name)
+    + " " + (response.businesses[0].location.address1) + " " + (response.businesses[0].location.city) + " "
+    + (response.businesses[0].location.state) + " " + (response.businesses[0].location.zip_code) + " "),
+    end: location = address.concat(" ", city, " ", state, " ", zipCode)
+  });
+}
+
+// End of Michael's code //
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
