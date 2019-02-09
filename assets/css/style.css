@@ -10,6 +10,9 @@ body {
 }
 .confirm-order {
     width: 192px;
+    position: absolute;
+    top: 185px;
+    right: 16px;
 }
 h1 {
     font-family: 'Shrikhand', cursive;
@@ -49,6 +52,11 @@ h1 {
 .required {
     font-size: 12px;
 }
-/* .results-box {
-    display: none;
-} */
+.stores-list {
+    position: absolute;
+    top: 120px;
+    right: 16px;
+    width: 524px;
+    padding: 15px;
+    background-color: #ffffff;
+}
