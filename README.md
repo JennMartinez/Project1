@@ -2,18 +2,19 @@
 
 KRAVE
 =====
+https://jennmartinez.github.io/Project1/
 
 ## Team Members
 Jenn Martinez, Michael Navid, Sergio Di Martino
 
 ## Project Description
-Our app is a food and alcohol delivery service. It will use a MapQuest API to find local grocery stores or liquor stores, and contact a delivery driver to complete the transaction.
+Our app is the website for a food and alcohol delivery service. It uses a Yelp API to find local grocery stores or liquor stores, and a MapQuest API to map the delivery route.
 
-## APIs to be used
+## APIs used
 + MapQuest
 + Yelp
 
-## Rough breakdown of tasks
-+ Sergio will handle the layout (HTML and CSS)
-+ Jenn will configure the Yelp API
-+ Michael will configure the MapQuest API
+## Credits
++ [Sergio](mailto:sergio@webdevserg.io) designed and coded the layout/UI
++ Jenn configured the Yelp API
++ Michael configured the MapQuest API
